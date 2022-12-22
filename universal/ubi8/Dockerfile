@@ -222,6 +222,11 @@ cd -
 rm -rf "${TEMP_DIR}"
 EOF
 
+## Neovim
+RUN <<EOF
+dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+dnf install -y neovim python3-neovim 
+
 ## krew
 RUN <<EOF
 set -euf -o pipefail
